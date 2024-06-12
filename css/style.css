@@ -1,0 +1,224 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Fuente personalizada */
+@font-face {
+    font-family: 'Krona One';
+    src: url('../fonts/KronaOne-Regular.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Bold.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Poppins light';
+    src: url('/fonts/Poppins-Light.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+/* Estilos generales */
+body {
+    background-color: #111215;
+}
+
+.container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.back {
+    padding: 32px 0;
+    background-color: #000000;
+}
+
+.menu { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background-color: #000000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Krona One', sans-serif;
+    background: linear-gradient(rgb(254, 254, 254), #000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu .navbar {
+    display: flex;
+}
+
+.menu .navbar a {
+    font-size: 16px;
+    padding: 20px;
+    color: #a19f9f;
+    font-family: 'Krona One', sans-serif;
+    display: block;
+}
+
+.menu .navbar a:hover {
+    color: aliceblue;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-label {
+    cursor: pointer;
+    display: none;
+
+}
+.menu-icono {
+    width: 25px;
+    height: auto;
+
+
+}
+
+/* Media Queries para hacer el menú responsive */
+@media (max-width: 761px) {
+    .menu {
+        padding: 14px 20px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-label {
+        display: block;
+        align-self: center; /* Mantiene el icono del menú centrado verticalmente */
+    }
+
+    .menu .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000000;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .menu .navbar a {
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu:checked ~ .navbar {
+        display: flex;
+        right: 0%;
+    }
+}
+
+body {
+    background-color: #111215; /* Color de fondo base (negro en este caso) */
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 300px 300px; /* Tamaño de cada cuadrado en la cuadrícula */
+    
+}
+
+section{
+    display: flex;
+    justify-content: space-around;
+}
+
+.circle {
+    width: 100px;
+    height: 150px;
+    background-color: transparent;
+    border-radius: 48%;
+    box-shadow: inset 0 0 20px rgba(4, 82, 130, 0.5);
+    position:relative;
+    scale: 3;
+    transform: translate(50%,58%);
+
+}
+.text {
+    position: absolute;
+    top: 50%;
+    left: -70%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-family: 'krona One', sans-serif;
+    text-align: center;
+    transform: rotate(-90deg);
+}
+.foto {
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    transform: translate(50%, 50%);
+    text-align: center;
+    width: 90%;
+    height: 90%;
+}
+
+.circulo2 {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(4, 82, 130, 0.5);
+    position:relative;
+    scale: 3;
+    transform: translate(-60%, 70%);
+
+}
+
+.texto2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+    font-family: 'krona One', sans-serif;
+    text-align: center;
+    background: linear-gradient(rgb(254, 254, 254), #000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.texto3 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4px;
+    font-family: 'poppins',sans-serif;
+    text-align: center;
+}
+
+.presentacion {
+    color: aliceblue;
+    font-family: 'poppins light', sans-serif;
+    font-size: 5px;
+    text-align: center;
+    line-height: 110%;
+    margin-top: 100px ;
+    word-spacing: 5px;
+}
